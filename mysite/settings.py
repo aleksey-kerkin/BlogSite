@@ -16,6 +16,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SITE_ID = 1
 
 # Application definition
 
@@ -25,6 +26,8 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    "django.contrib.sites",
+    "django.contrib.sitemaps",
     "django.contrib.staticfiles",
     "taggit",
     "blog.apps.BlogConfig",
@@ -117,7 +120,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 EMAIL_HOST = "smtp.yandex.ru"
 EMAIL_PORT = 465
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER = config("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
 EMAIL_USE_SSL = True
-DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
+DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
